@@ -18,7 +18,7 @@ public class MedicalRecordController {
     private MedicalRecordService medicalRecordService;
 
     // Récupérer tous les dossiers médicaux
-    @GetMapping
+    @GetMapping("")
     public List<MedicalRecord> getAllMedicalRecords() {
         return medicalRecordService.getAllMedicalRecords();
     }

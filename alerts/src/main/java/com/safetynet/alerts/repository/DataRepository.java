@@ -44,7 +44,10 @@ public class DataRepository {
             this.fireStations = data.getFirestations();
             this.medicalRecords = data.getMedicalrecords();
             log.info("Données chargées avec succès depuis data.json");
+            log.info("Data loaded: Persons - {}, FireStations - {}, MedicalRecords - {}",
+                    persons.size(), fireStations.size(), medicalRecords.size());
         } catch (IOException e) {
+
             log.error("Erreur lors du chargement du fichier JSON", e);
         }
     }
