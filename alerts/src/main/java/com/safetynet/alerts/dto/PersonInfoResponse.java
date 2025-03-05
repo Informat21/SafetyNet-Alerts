@@ -1,4 +1,4 @@
-package com.safetynet.alerts.dto;
+/*package com.safetynet.alerts.dto;
 
 import lombok.Data;
 import java.util.List;
@@ -13,3 +13,6 @@ public class PersonInfoResponse {
     private List<String> medications;
     private List<String> allergies;
 }
+
+
+ */

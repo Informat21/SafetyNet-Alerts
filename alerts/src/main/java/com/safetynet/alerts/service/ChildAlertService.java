@@ -1,14 +1,14 @@
 package com.safetynet.alerts.service;
 
 import com.safetynet.alerts.dto.ChildAlertResponse;
+import com.safetynet.alerts.dto.PersonInfoDTO;
 import com.safetynet.alerts.model.Person;
-import com.safetynet.alerts.model.MedicalRecord;
 import com.safetynet.alerts.repository.DataRepository;
+import com.safetynet.alerts.utils.DateUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
-import java.time.Period;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -18,43 +18,33 @@ public class ChildAlertService {
     @Autowired
     private DataRepository dataRepository;
 
-    public List<ChildAlertResponse> getChildrenAtAddress(String address) {
-        List<Person> residents = dataRepository.findAll().stream()
-                .filter(person -> person.getAddress().equalsIgnoreCase(address))
-                .toList();
+    public ChildAlertResponse getChildrenByAddress(String address) {
+        // Récupérer toutes les personnes à l'adresse donnée
+        List<Person> personsAtAddress = dataRepository.findPersonsByAddress(address);
 
-        return residents.stream()
+        // Filtrer les enfants (moins de 18 ans)
+        List<PersonInfoDTO> children = personsAtAddress.stream()
                 .map(person -> {
-                    MedicalRecord medicalRecord = dataRepository.getMedicalRecords().stream()
-                            .filter(record -> record.getFirstName().equalsIgnoreCase(person.getFirstName()) &&
-                                    record.getLastName().equalsIgnoreCase(person.getLastName()))
-                            .findFirst().orElse(null);
-
-                    if (medicalRecord != null) {
-                        int age = calculateAge(medicalRecord.getBirthdate());
-                        if (age < 18) {
-                            List<String> otherMembers = residents.stream()
-                                    .filter(p -> !(p.getFirstName().equalsIgnoreCase(person.getFirstName()) &&
-                                            p.getLastName().equalsIgnoreCase(person.getLastName())))
-                                    .map(p -> p.getFirstName() + " " + p.getLastName())
-                                    .collect(Collectors.toList());
-
-                            ChildAlertResponse child = new ChildAlertResponse();
-                            child.setFirstName(person.getFirstName());
-                            child.setLastName(person.getLastName());
-                            child.setAge(age);
-                            child.setOtherHouseholdMembers(otherMembers);
-                            return child;
-                        }
-                    }
-                    return null;
+                    int age = dataRepository.findMedicalRecordByFullName(person.getFirstName(), person.getLastName())
+                            .map(medicalRecord -> DateUtils.calculateAge(medicalRecord.getBirthdate()))
+                            .orElse(0);
+                    return new PersonInfoDTO(person.getFirstName(), person.getLastName(), age);
                 })
-                .filter(child -> child != null)
+                .filter(personInfo -> personInfo.getAge() <= 18)
                 .collect(Collectors.toList());
-    }
 
-    private int calculateAge(String birthdate) {
-        LocalDate birthDate = LocalDate.parse(birthdate);
-        return Period.between(birthDate, LocalDate.now()).getYears();
+        // Récupérer les autres membres du foyer (toutes les personnes à cette adresse sauf les enfants)
+        List<PersonInfoDTO> otherHouseholdMembers = personsAtAddress.stream()
+                .map(person -> {
+                    int age = dataRepository.findMedicalRecordByFullName(person.getFirstName(), person.getLastName())
+                            .map(medicalRecord -> DateUtils.calculateAge(medicalRecord.getBirthdate()))
+                            .orElse(0);
+                    return new PersonInfoDTO(person.getFirstName(), person.getLastName(), age);
+                })
+                .filter(personInfo -> personInfo.getAge() > 18)
+                .collect(Collectors.toList());
+
+        // Retourner la réponse avec les enfants et les autres membres du foyer
+        return new ChildAlertResponse(children, otherHouseholdMembers);
     }
 }

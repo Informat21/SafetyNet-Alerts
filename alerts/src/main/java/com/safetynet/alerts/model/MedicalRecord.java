@@ -1,5 +1,6 @@
 package com.safetynet.alerts.model;
 
+import com.safetynet.alerts.utils.DateUtils;
 import lombok.Data;
 import java.util.List;
 
@@ -10,4 +11,8 @@ public class MedicalRecord {
     private String birthdate;
     private List<String> medications;
     private List<String> allergies;
+
+    public int getAge() {
+        return DateUtils.calculateAge(birthdate); // Utilisation de la méthode utilitaire
+    }
 }

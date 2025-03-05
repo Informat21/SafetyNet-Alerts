@@ -11,10 +11,8 @@ import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Repository;
 import org.springframework.context.event.EventListener;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
-
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -54,6 +52,7 @@ public class DataRepository {
     //Récupérer toutes les personnes
     public List<Person> findAll() {
         return persons;
+
     }
 
     //Trouver une personne par prénom et nom
@@ -122,4 +121,45 @@ public class DataRepository {
         private List<FireStation> firestations;
         private List<MedicalRecord> medicalrecords;
     }
+
+    // Trouver toutes les personnes par nom de famille
+    public List<Person> findByLastName(String lastName) {
+        return persons.stream()
+                .filter(p -> p.getLastName().equalsIgnoreCase(lastName))
+                .collect(Collectors.toList());
+    }
+
+    // Récupérer le dossier médical d'une personne
+    public Optional<MedicalRecord> findMedicalRecordByFullName(String firstName, String lastName) {
+        return medicalRecords.stream()
+                .filter(mr -> mr.getFirstName().equalsIgnoreCase(firstName) && mr.getLastName().equalsIgnoreCase(lastName))
+                .findFirst();
+    }
+    // Récupérer les adresses desservies par une liste de numéros de caserne
+    public List<String> findAddressesByStationNumbers(List<String> stationNumbers) {
+        List<String> addresses = fireStations.stream()
+                .filter(fs -> stationNumbers.contains(fs.getStation()))
+                .map(FireStation::getAddress)
+                .collect(Collectors.toList());
+
+        log.info("FireStations loaded: {}", fireStations);
+        log.info("Station Numbers: {}", stationNumbers);
+        log.info("Addresses found: {}", addresses);
+
+        return addresses;
+    }
+
+    public List<Person> findPersonsByAddress(String address) {
+        return persons.stream()
+                .filter(person -> person.getAddress().equalsIgnoreCase(address))
+                .collect(Collectors.toList());
+    }
+
+    public Optional<String> findStationNumberByAddress(String address) {
+        return fireStations.stream()
+                .filter(fs -> fs.getAddress().equalsIgnoreCase(address))
+                .map(fs -> String.valueOf(fs.getStation())) // Convertit Integer en String
+                .findFirst();
+    }
+
 }

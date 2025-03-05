@@ -1,65 +1,67 @@
 package com.safetynet.alerts.service;
 
-import com.safetynet.alerts.dto.FloodResponse;
+import com.safetynet.alerts.dto.FloodStationDTO;
+import com.safetynet.alerts.dto.ResidentInfoDTO;
 import com.safetynet.alerts.model.Person;
 import com.safetynet.alerts.model.MedicalRecord;
-import com.safetynet.alerts.model.FireStation;
 import com.safetynet.alerts.repository.DataRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.time.Period;
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
 @Service
+@RequiredArgsConstructor
 public class FloodService {
 
-    @Autowired
-    private DataRepository dataRepository;
+    private final DataRepository dataRepository;
 
-    public List<FloodResponse> getHouseholdsByStations(List<Integer> stations) {
-        List<String> addresses = dataRepository.findAllFireStations().stream()
-                .filter(fs -> stations.contains(fs.getStation()))
-                .map(FireStation::getAddress)
-                .toList();
+    public List<FloodStationDTO> getHouseholdsByStations(List<String> stationNumbers) {
+        // Récupérer les adresses desservies par les casernes demandées
+        List<String> addresses = dataRepository.findAddressesByStationNumbers(stationNumbers);
 
-        Map<String, List<Person>> households = dataRepository.findAll().stream()
+        // Grouper les personnes par adresse
+        Map<String, List<Person>> personsByAddress = dataRepository.findAll().stream()
                 .filter(person -> addresses.contains(person.getAddress()))
                 .collect(Collectors.groupingBy(Person::getAddress));
 
-        return households.entrySet().stream().map(entry -> {
-            FloodResponse floodResponse = new FloodResponse();
-            floodResponse.setAddress(entry.getKey());
-            List<FloodResponse.ResidentDetails> residents = entry.getValue().stream().map(person -> {
-                MedicalRecord medicalRecord = dataRepository.getMedicalRecords().stream()
-                        .filter(record -> record.getFirstName().equalsIgnoreCase(person.getFirstName()) &&
-                                record.getLastName().equalsIgnoreCase(person.getLastName()))
-                        .findFirst().orElse(null);
+        List<FloodStationDTO> result = new ArrayList<>();
 
-                FloodResponse.ResidentDetails details = new FloodResponse.ResidentDetails();
-                details.setFirstName(person.getFirstName());
-                details.setLastName(person.getLastName());
-                details.setPhone(person.getPhone());
+        // Construire la liste de foyers avec détails des habitants
+        personsByAddress.forEach((address, persons) -> {
+            FloodStationDTO dto = new FloodStationDTO();
+            dto.setAddress(address);
+
+            List<ResidentInfoDTO> residents = persons.stream().map(person -> {
+                ResidentInfoDTO residentInfo = new ResidentInfoDTO();
+                residentInfo.setFirstName(person.getFirstName());
+                residentInfo.setLastName(person.getLastName());
+                residentInfo.setPhone(person.getPhone());
+
+                // Trouver le dossier médical de la personne
+                MedicalRecord medicalRecord = dataRepository
+                        .findMedicalRecordByFullName(person.getFirstName(), person.getLastName())
+                        .orElse(null);
 
                 if (medicalRecord != null) {
-                    details.setAge(calculateAge(medicalRecord.getBirthdate()));
-                    details.setMedications(medicalRecord.getMedications());
-                    details.setAllergies(medicalRecord.getAllergies());
-                } else {
-                    // Gérer le cas où il n'y a pas de dossier médical (optionnel)
-                    details.setAge(0); // ou valeur par défaut
-                    details.setMedications(Arrays.asList());
-                    details.setAllergies(Arrays.asList());
+                    // Calculer l'âge
+                    residentInfo.setAge(calculateAge(medicalRecord.getBirthdate()));
+                    residentInfo.setMedications(medicalRecord.getMedications());
+                    residentInfo.setAllergies(medicalRecord.getAllergies());
                 }
-                return details;
+                return residentInfo;
             }).collect(Collectors.toList());
-            floodResponse.setResidents(residents);
-            return floodResponse;
-        }).collect(Collectors.toList());
+
+            dto.setResidents(residents);
+            result.add(dto);
+        });
+
+        return result;
     }
 
     private int calculateAge(String birthdate) {

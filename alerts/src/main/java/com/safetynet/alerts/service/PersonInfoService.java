@@ -1,14 +1,13 @@
 package com.safetynet.alerts.service;
 
-import com.safetynet.alerts.dto.PersonInfoResponse;
+import com.safetynet.alerts.dto.PersonInfoDTO;
 import com.safetynet.alerts.model.Person;
 import com.safetynet.alerts.model.MedicalRecord;
 import com.safetynet.alerts.repository.DataRepository;
+import com.safetynet.alerts.utils.DateUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
-import java.time.Period;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -18,35 +17,25 @@ public class PersonInfoService {
     @Autowired
     private DataRepository dataRepository;
 
-    public List<PersonInfoResponse> getPersonInfo(String firstName, String lastName) {
-        List<Person> persons = dataRepository.findAll().stream()
-                .filter(person -> person.getLastName().equalsIgnoreCase(lastName) &&
-                        person.getFirstName().equalsIgnoreCase(firstName))
-                .collect(Collectors.toList());
+    public List<PersonInfoDTO> getPersonInfoByLastName(String lastName) {
+        List<Person> persons = dataRepository.findByLastName(lastName);
 
         return persons.stream().map(person -> {
-            MedicalRecord medicalRecord = dataRepository.getMedicalRecords().stream()
-                    .filter(record -> record.getFirstName().equalsIgnoreCase(person.getFirstName()) &&
-                            record.getLastName().equalsIgnoreCase(person.getLastName()))
-                    .findFirst().orElse(null);
+            PersonInfoDTO dto = new PersonInfoDTO();
+            dto.setFirstName(person.getFirstName());
+            dto.setLastName(person.getLastName());
+            dto.setAddress(person.getAddress());
+            dto.setEmail(person.getEmail());
 
-            PersonInfoResponse response = new PersonInfoResponse();
-            response.setFirstName(person.getFirstName());
-            response.setLastName(person.getLastName());
-            response.setAddress(person.getAddress());
-            response.setEmail(person.getEmail());
+            // Trouver le dossier médical associé
+            dataRepository.findMedicalRecordByFullName(person.getFirstName(), person.getLastName())
+                    .ifPresent(medicalRecord -> {
+                        dto.setMedications(medicalRecord.getMedications());
+                        dto.setAllergies(medicalRecord.getAllergies());
+                        dto.setAge(DateUtils.calculateAge(medicalRecord.getBirthdate()));
+                    });
 
-            if (medicalRecord != null) {
-                response.setAge(calculateAge(medicalRecord.getBirthdate()));
-                response.setMedications(medicalRecord.getMedications());
-                response.setAllergies(medicalRecord.getAllergies());
-            }
-            return response;
+            return dto;
         }).collect(Collectors.toList());
-    }
-
-    private int calculateAge(String birthdate) {
-        LocalDate birthDate = LocalDate.parse(birthdate);
-        return Period.between(birthDate, LocalDate.now()).getYears();
     }
 }

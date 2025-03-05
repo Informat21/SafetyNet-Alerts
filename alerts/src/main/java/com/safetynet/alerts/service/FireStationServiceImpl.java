@@ -2,7 +2,7 @@ package com.safetynet.alerts.service;
 
 import com.safetynet.alerts.dto.ChildAlertResponse;
 import com.safetynet.alerts.dto.FireStationCoverageResponse;
-import com.safetynet.alerts.dto.PersonInfo;
+import com.safetynet.alerts.dto.PersonInfoDTO;
 import com.safetynet.alerts.model.FireStation;
 import com.safetynet.alerts.model.MedicalRecord;
 import com.safetynet.alerts.model.Person;
@@ -72,8 +72,8 @@ public class FireStationServiceImpl implements FireStationService {
         }
 
         // Construire la réponse
-        List<PersonInfo> personInfos = coveredPersons.stream()
-                .map(person -> new PersonInfo(person.getFirstName(), person.getLastName(), person.getAddress(), person.getPhone()))
+        List<PersonInfoDTO> persons = coveredPersons.stream()
+                .map(person -> new PersonInfoDTO(person.getFirstName(), person.getLastName(), person.getAddress(),0, person.getPhone(),"",new ArrayList<>(),new ArrayList<>()))
                 .collect(Collectors.toList());
 
         // Compter les adultes et les enfants
@@ -95,7 +95,7 @@ public class FireStationServiceImpl implements FireStationService {
 
         }
 
-        return new FireStationCoverageResponse(personInfos, adultCount, childCount);
+        return new FireStationCoverageResponse(persons, adultCount, childCount);
     }
 
     private int calculateAge(String birthdate) {
@@ -111,8 +111,8 @@ public class FireStationServiceImpl implements FireStationService {
                 .collect(Collectors.toList());
 
         // Séparer les enfants (âge ≤ 18) des autres membres du foyer
-        List<PersonInfo> children = new ArrayList<>();
-        List<PersonInfo> otherMembers = new ArrayList<>();
+        List<PersonInfoDTO> children = new ArrayList<>();
+        List<PersonInfoDTO> otherMembers = new ArrayList<>();
 
         for (Person person : residents) {
             Optional<MedicalRecord> medicalRecord = dataRepository.getMedicalRecords().stream()
@@ -122,7 +122,16 @@ public class FireStationServiceImpl implements FireStationService {
 
             if (medicalRecord.isPresent()) {
                 int age = calculateAge(medicalRecord.get().getBirthdate());
-                PersonInfo personInfo = new PersonInfo(person.getFirstName(), person.getLastName(), person.getAddress(), person.getPhone());
+                PersonInfoDTO personInfo = new PersonInfoDTO(
+                        person.getFirstName(),
+                        person.getLastName(),
+                        person.getAddress(),
+                        medicalRecord.map(record -> calculateAge(record.getBirthdate())).orElse(0), // Age
+                        person.getPhone(),
+                        "", // Email non disponible
+                        medicalRecord.map(MedicalRecord::getMedications).orElse(new ArrayList<>()), // Médicaments
+                        medicalRecord.map(MedicalRecord::getAllergies).orElse(new ArrayList<>()) // Allergies
+                );
 
                 if (age <= 18) {
                     children.add(personInfo);

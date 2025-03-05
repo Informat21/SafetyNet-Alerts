@@ -43,18 +43,19 @@ public class FireStationController {
     public ResponseEntity<FireStationCoverageResponse> getPersonsCoveredByStation(
             @RequestParam int stationNumber) {
         FireStationCoverageResponse response = fireStationService.getPersonsCoveredByStation(stationNumber);
-        if (response.getPersons().isEmpty()){
+        /*if (response.getPersons().isEmpty()){
             return ResponseEntity.noContent().build();
-        }
+        }*/
         return ResponseEntity.ok(response);}
 
     @GetMapping(value = "/childAlert", params = "address")
     public ResponseEntity<ChildAlertResponse> getChildrenAtAddress(@RequestParam String address) {
         ChildAlertResponse response = fireStationService.getChildrenAtAddress(address);
 
-        if (response.getChildren().isEmpty()) {
+        if (response == null || response.getChildren() == null || response.getChildren().isEmpty()) {
             return ResponseEntity.noContent().build();
         }
+
 
         return ResponseEntity.ok(response);
     }

@@ -1,4 +1,4 @@
-package com.safetynet.alerts.dto;
+/*package com.safetynet.alerts.dto;
 
 import lombok.Data;
 
@@ -16,3 +16,5 @@ public class PersonInfo {
         this.phone = phone;
     }
 }
+
+ */

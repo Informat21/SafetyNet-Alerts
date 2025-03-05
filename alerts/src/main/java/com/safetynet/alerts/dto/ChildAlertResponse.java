@@ -1,4 +1,4 @@
-package com.safetynet.alerts.dto;
+/*package com.safetynet.alerts.dto;
 
 import lombok.Data;
 import java.util.List;
@@ -14,10 +14,23 @@ public class ChildAlertResponse {
     }
 
     public ChildAlertResponse() {
-        
+
     }
 
     public CharSequence getChildren() {
         return null;
     }
+}
+ */
+package com.safetynet.alerts.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import java.util.List;
+
+@Data
+@AllArgsConstructor
+public class ChildAlertResponse {
+    private List<PersonInfoDTO> children;
+    private List<PersonInfoDTO> otherHouseholdMembers;
 }
