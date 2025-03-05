@@ -162,4 +162,12 @@ public class DataRepository {
                 .findFirst();
     }
 
+    public List<String> getAddressesByStation(List<Integer> stationNumbers) {
+        return fireStations.stream()
+                .filter(fs -> stationNumbers.contains(fs.getStation()))  // Vérifie si la station est dans la liste des numéros
+                .map(FireStation::getAddress)
+                .collect(Collectors.toList());
+    }
+
+
 }

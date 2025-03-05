@@ -20,7 +20,7 @@ public class FloodController {
     private FloodService floodService;
 
     @GetMapping ("/stations")
-    public List<FloodStationDTO> getHouseholdsByStations(@RequestParam List<String> stations) {
+    public List<FloodStationDTO> getHouseholdsByStations(@RequestParam List<Integer> stations) {
         return floodService.getHouseholdsByStations(stations);
     }
 }

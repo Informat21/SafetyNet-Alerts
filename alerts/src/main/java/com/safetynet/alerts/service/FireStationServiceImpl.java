@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.time.Period;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -99,9 +100,11 @@ public class FireStationServiceImpl implements FireStationService {
     }
 
     private int calculateAge(String birthdate) {
-        LocalDate birthDate = LocalDate.parse(birthdate);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+        LocalDate birthDate = LocalDate.parse(birthdate, formatter);
         return Period.between(birthDate, LocalDate.now()).getYears();
     }
+
 
     @Override
     public ChildAlertResponse getChildrenAtAddress(String address) {
