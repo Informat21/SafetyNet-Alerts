@@ -48,12 +48,13 @@ public class FireStationCoverageResponse {
     private int numberOfAdults;
     private int numberOfChildren;
 
-    @Data
+
+    /*@Data
     @AllArgsConstructor
-    public static class PersonInfo {
+    public static class PersonInfoDTO {
         private String firstName;
         private String lastName;
         private String address;
         private String phone;
-    }
+    }*/
 }

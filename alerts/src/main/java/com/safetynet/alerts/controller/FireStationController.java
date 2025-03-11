@@ -43,9 +43,9 @@ public class FireStationController {
     public ResponseEntity<FireStationCoverageResponse> getPersonsCoveredByStation(
             @RequestParam int stationNumber) {
         FireStationCoverageResponse response = fireStationService.getPersonsCoveredByStation(stationNumber);
-        /*if (response.getPersons().isEmpty()){
-            return ResponseEntity.noContent().build();
-        }*/
+        if (response == null) { // Vérifie si l'objet retourné est null
+            return ResponseEntity.notFound().build();
+        }
         return ResponseEntity.ok(response);}
 
     @GetMapping(value = "/childAlert", params = "address")
