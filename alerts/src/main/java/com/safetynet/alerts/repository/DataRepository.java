@@ -24,7 +24,7 @@ import java.util.Iterator;
 @Data
 public class DataRepository {
 
-    private List<Person> persons = new ArrayList<>();
+    private static List<Person> persons = new ArrayList<>();
     private List<FireStation> fireStations;
     private List<MedicalRecord> medicalRecords;
 
@@ -56,7 +56,7 @@ public class DataRepository {
     }
 
     //Trouver une personne par prénom et nom
-    public Optional<Person> findByFullName(String firstName, String lastName) {
+    public static Optional<Person> findByFullName(String firstName, String lastName) {
         return persons.stream()
                 .filter(p -> p.getFirstName().equalsIgnoreCase(firstName) && p.getLastName().equalsIgnoreCase(lastName))
                 .findFirst();

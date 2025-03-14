@@ -62,29 +62,32 @@
 			<version>5.14.2</version>
 			<scope>test</scope>
 		</dependency>
-	</dependencies>
 
 
-	<!-- JUnit 5
+
+	<!-- JUnit 5 -->
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-api</artifactId>
+			<version>5.11.4</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-engine</artifactId>
+			<version>5.11.4</version>
 			<scope>test</scope>
 		</dependency>
-		<!- MockMvc & Spring Extensions
+		<!-- MockMvc & Spring Extensions-->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
+			<version>6.2.3</version>
 			<scope>test</scope>
 		</dependency>
 
 	</dependencies>
-	<!-->
+
 	<build>
 		<plugins>
 			<plugin>
@@ -110,24 +113,14 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 
-			<!--Surefire (Tests)
-				<configuration>
-					<excludes>
-						<exclude>
-							<groupId>org.projectlombok</groupId>
-							<artifactId>lombok</artifactId>
-						</exclude>
-					</excludes>
-				</configuration>
-			</plugin>
-		<!-->
+
 				<!-- Plugin pour exécuter les tests -->
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>3.5.2</version>
 					<configuration>
-						<reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
+						<reportsDirectory>target/surefire-reports</reportsDirectory>
 					</configuration>
 				</plugin>
 
@@ -184,8 +177,6 @@
 				</includes>
 			</testResource>
 		</testResources>
-
-
 
 	</build>
 </project>

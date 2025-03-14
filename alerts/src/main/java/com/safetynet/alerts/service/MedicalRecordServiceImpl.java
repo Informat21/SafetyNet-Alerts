@@ -2,7 +2,7 @@ package com.safetynet.alerts.service;
 
 import com.safetynet.alerts.model.MedicalRecord;
 import com.safetynet.alerts.repository.DataRepository;
-import com.safetynet.alerts.service.MedicalRecordService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -52,4 +52,5 @@ public class MedicalRecordServiceImpl implements MedicalRecordService {
                         mr.getLastName().equalsIgnoreCase(lastName))
                 .findFirst();
     }
+
 }
