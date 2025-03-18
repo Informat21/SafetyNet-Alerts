@@ -6,6 +6,8 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @ComponentScan("com.safety.alerts.service")
+@ComponentScan(basePackages = "com.safetyNet.alerts")
+
 public class SafetyNetAlertsApplication {
 
 	public static void main(String[] args) {
