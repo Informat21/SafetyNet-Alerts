@@ -63,6 +63,11 @@ public class FloodService {
                     residentInfo.setMedications(medicalRecord.getMedications());
                     residentInfo.setAllergies(medicalRecord.getAllergies());
                 }
+                else {
+                    residentInfo.setAge(-2); // Valeur pour indiquer absence de dossier médical
+                    residentInfo.setMedications(new ArrayList<>());  //  Évite le NullPointerException
+                    residentInfo.setAllergies(new ArrayList<>());    // Évite le NullPointerException
+                }
                 return residentInfo;
             }).collect(Collectors.toList());
 

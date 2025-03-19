@@ -56,7 +56,7 @@ public class DataRepository {
     }
 
     //Trouver une personne par prénom et nom
-    public static Optional<Person> findByFullName(String firstName, String lastName) {
+    public /*static*/ Optional<Person> findByFullName(String firstName, String lastName) {
         return persons.stream()
                 .filter(p -> p.getFirstName().equalsIgnoreCase(firstName) && p.getLastName().equalsIgnoreCase(lastName))
                 .findFirst();
