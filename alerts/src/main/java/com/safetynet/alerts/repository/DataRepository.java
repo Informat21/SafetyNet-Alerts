@@ -25,8 +25,8 @@ import java.util.Iterator;
 public class DataRepository {
 
     private static List<Person> persons = new ArrayList<>();
-    private List<FireStation> fireStations;
-    private List<MedicalRecord> medicalRecords;
+    private List<FireStation> fireStations = new ArrayList<>();
+    private List<MedicalRecord> medicalRecords = new ArrayList<>();
 
 
     @EventListener(ApplicationReadyEvent.class)
