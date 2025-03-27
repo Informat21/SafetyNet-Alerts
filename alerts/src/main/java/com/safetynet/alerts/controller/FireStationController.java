@@ -56,8 +56,6 @@ public class FireStationController {
             return ResponseEntity.noContent().build();
         }
 
-
         return ResponseEntity.ok(response);
     }
-
 }

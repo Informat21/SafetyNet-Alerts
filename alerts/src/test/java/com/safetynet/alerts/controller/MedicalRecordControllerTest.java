@@ -1,53 +1,5 @@
 package com.safetynet.alerts.controller;
 
-/*import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.annotation.DirtiesContext;
-import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
-import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
-import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import org.springframework.web.context.WebApplicationContext;
-
-import static org.springframework.http.MediaType.APPLICATION_JSON;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-
-@SpringBootTest
-@AutoConfigureMockMvc
-@DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
-class TestMedicalRecordsController {
-    @Autowired
-    private MockMvc mockMvc;
-    @Autowired
-    private WebApplicationContext WebContext;
-
-    @BeforeEach
-    public void setupMockMvc() {
-        mockMvc = MockMvcBuilders.webAppContextSetup(WebContext).build();
-    }
-
-    @Test
-    @Tag("CREATE")
-    @DisplayName("ERROR CREATE Unknown Person with MedicalRecord")
-    void errorCreateUnknownPersonWithMedicalRecord() throws Exception {
-        this.mockMvc
-                .perform(MockMvcRequestBuilders.post("/medicalRecord").contentType(APPLICATION_JSON)
-                        .content(" { \r\n" + "     \"firstName\":\"Nicolas\", \r\n" + "     \"lastName\":\"Gros\", \r\n"
-                                + "     \"birthdate\":\"23/03/1993\", \r\n"
-                                + "     \"medications\":[\"hydroxychloroquine:6350mg\", \"anticovid:1000mg\"], \r\n"
-                                + "     \"allergies\":[\"fourmisdesneiges\"] \r\n" + "     }")
-                        .accept(APPLICATION_JSON))
-                .andDo(MockMvcResultHandlers.print()).andExpect(status().isConflict());
-    }
-}
-*/
-
-
 import com.safetynet.alerts.model.MedicalRecord;
 import com.safetynet.alerts.service.MedicalRecordService;
 import org.junit.jupiter.api.BeforeEach;

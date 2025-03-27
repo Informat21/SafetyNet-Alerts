@@ -2,7 +2,6 @@ package com.safetynet.alerts.service;
 
 import com.safetynet.alerts.dto.FloodStationDTO;
 import com.safetynet.alerts.dto.ResidentInfoDTO;
-import com.safetynet.alerts.model.FireStation;
 import com.safetynet.alerts.model.Person;
 import com.safetynet.alerts.model.MedicalRecord;
 import com.safetynet.alerts.repository.DataRepository;
@@ -14,7 +13,6 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -84,8 +82,4 @@ public class FloodService {
         LocalDate birthDate = LocalDate.parse(birthdate,formatter);
         return Period.between(birthDate, LocalDate.now()).getYears();
     }
-
-
-
-
 }

@@ -7,7 +7,7 @@ import com.safetynet.alerts.model.FireStation;
 import com.safetynet.alerts.model.MedicalRecord;
 import com.safetynet.alerts.model.Person;
 import com.safetynet.alerts.repository.DataRepository;
-import com.safetynet.alerts.service.FireStationService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -105,7 +105,6 @@ public class FireStationServiceImpl implements FireStationService {
         return Period.between(birthDate, LocalDate.now()).getYears();
     }
 
-
     @Override
     public ChildAlertResponse getChildrenAtAddress(String address) {
         // Récupérer toutes les personnes vivant à l'adresse donnée
@@ -147,5 +146,4 @@ public class FireStationServiceImpl implements FireStationService {
         // Retourne la liste des enfants et des autres membres du foyer
         return new ChildAlertResponse(children, otherMembers);
     }
-
 }

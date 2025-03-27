@@ -1,0 +1,377 @@
+2025-03-27T00:01:39.285+01:00  INFO 1893 --- [main] c.s.alerts.SafetyNetAlertsApplication    : Starting SafetyNetAlertsApplication using Java 23 with PID 1893 (/Users/fethikharrat/Downloads/SafetyNet-Alerts/alerts/target/classes started by fethikharrat in /Users/fethikharrat/Downloads/SafetyNet-Alerts/alerts)
+2025-03-27T00:01:39.291+01:00  INFO 1893 --- [main] c.s.alerts.SafetyNetAlertsApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-03-27T00:01:40.108+01:00  INFO 1893 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-27T00:01:40.126+01:00  INFO 1893 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-27T00:01:40.126+01:00  INFO 1893 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-03-27T00:01:40.188+01:00  INFO 1893 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-27T00:01:40.189+01:00  INFO 1893 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 840 ms
+2025-03-27T00:01:40.571+01:00  WARN 1893 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-03-27T00:01:40.587+01:00  INFO 1893 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-03-27T00:01:40.604+01:00 ERROR 1893 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2025-03-27T00:21:23.104+01:00  INFO 1993 --- [main] c.s.alerts.SafetyNetAlertsApplication    : Starting SafetyNetAlertsApplication using Java 23 with PID 1993 (/Users/fethikharrat/Downloads/SafetyNet-Alerts/alerts/target/classes started by fethikharrat in /Users/fethikharrat/Downloads/SafetyNet-Alerts/alerts)
+2025-03-27T00:21:23.107+01:00  INFO 1993 --- [main] c.s.alerts.SafetyNetAlertsApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-03-27T00:21:23.920+01:00  INFO 1993 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-27T00:21:23.935+01:00  INFO 1993 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-27T00:21:23.936+01:00  INFO 1993 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-03-27T00:21:23.990+01:00  INFO 1993 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-27T00:21:23.991+01:00  INFO 1993 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 831 ms
+2025-03-27T00:21:24.390+01:00  WARN 1993 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-03-27T00:21:24.408+01:00  INFO 1993 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-03-27T00:21:24.426+01:00 ERROR 1993 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2025-03-27T00:22:11.403+01:00  INFO 2027 --- [main] c.s.alerts.SafetyNetAlertsApplication    : Starting SafetyNetAlertsApplication using Java 23 with PID 2027 (/Users/fethikharrat/Downloads/SafetyNet-Alerts/alerts/target/classes started by fethikharrat in /Users/fethikharrat/Downloads/SafetyNet-Alerts/alerts)
+2025-03-27T00:22:11.405+01:00  INFO 2027 --- [main] c.s.alerts.SafetyNetAlertsApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-03-27T00:22:12.286+01:00  INFO 2027 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-27T00:22:12.307+01:00  INFO 2027 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-27T00:22:12.307+01:00  INFO 2027 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-03-27T00:22:12.362+01:00  INFO 2027 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-27T00:22:12.362+01:00  INFO 2027 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 901 ms
+2025-03-27T00:22:12.770+01:00  INFO 2027 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-27T00:22:12.776+01:00  INFO 2027 --- [main] c.s.alerts.SafetyNetAlertsApplication    : Started SafetyNetAlertsApplication in 1.793 seconds (process running for 2.169)
+2025-03-27T00:22:12.842+01:00  INFO 2027 --- [main] c.s.alerts.repository.DataRepository     : Données chargées avec succès depuis data.json
+2025-03-27T00:22:12.842+01:00  INFO 2027 --- [main] c.s.alerts.repository.DataRepository     : Data loaded: Persons - 23, FireStations - 13, MedicalRecords - 23
+2025-03-27T00:22:12.844+01:00  INFO 2027 --- [main] c.s.alerts.SafetyNetAlertsApplication    : === Ceci est un test de log INFO ===
+2025-03-27T00:22:12.844+01:00 ERROR 2027 --- [main] c.s.alerts.SafetyNetAlertsApplication    : === Ceci est un test de log ERROR ===
+2025-03-27T00:23:47.129+01:00  INFO 2027 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-27T00:23:47.163+01:00  INFO 2027 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-27T00:24:24.910+01:00  INFO 2094 --- [main] c.s.alerts.SafetyNetAlertsApplication    : Starting SafetyNetAlertsApplication using Java 23 with PID 2094 (/Users/fethikharrat/Downloads/SafetyNet-Alerts/alerts/target/classes started by fethikharrat in /Users/fethikharrat/Downloads/SafetyNet-Alerts/alerts)
+2025-03-27T00:24:24.912+01:00  INFO 2094 --- [main] c.s.alerts.SafetyNetAlertsApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-03-27T00:24:25.803+01:00  INFO 2094 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-27T00:24:25.819+01:00  INFO 2094 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-27T00:24:25.819+01:00  INFO 2094 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-03-27T00:24:25.872+01:00  INFO 2094 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-27T00:24:25.872+01:00  INFO 2094 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 900 ms
+2025-03-27T00:24:26.246+01:00  INFO 2094 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-27T00:24:26.253+01:00  INFO 2094 --- [main] c.s.alerts.SafetyNetAlertsApplication    : Started SafetyNetAlertsApplication in 1.734 seconds (process running for 2.053)
+2025-03-27T00:24:26.301+01:00  INFO 2094 --- [main] c.s.alerts.repository.DataRepository     : Données chargées avec succès depuis data.json
+2025-03-27T00:24:26.301+01:00  INFO 2094 --- [main] c.s.alerts.repository.DataRepository     : Data loaded: Persons - 23, FireStations - 13, MedicalRecords - 23
+2025-03-27T00:24:26.302+01:00  INFO 2094 --- [main] c.s.alerts.SafetyNetAlertsApplication    : === Ceci est un test de log INFO ===
+2025-03-27T00:24:26.303+01:00 ERROR 2094 --- [main] c.s.alerts.SafetyNetAlertsApplication    : === Ceci est un test de log ERROR ===
+2025-03-27T00:25:40.994+01:00  INFO 2094 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-27T00:25:41.022+01:00  INFO 2094 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-27T00:26:04.433+01:00  INFO 2138 --- [main] c.s.alerts.SafetyNetAlertsApplication    : Starting SafetyNetAlertsApplication using Java 23 with PID 2138 (/Users/fethikharrat/Downloads/SafetyNet-Alerts/alerts/target/classes started by fethikharrat in /Users/fethikharrat/Downloads/SafetyNet-Alerts/alerts)
+2025-03-27T00:26:04.435+01:00  INFO 2138 --- [main] c.s.alerts.SafetyNetAlertsApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-03-27T00:26:05.305+01:00  INFO 2138 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-27T00:26:05.322+01:00  INFO 2138 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-27T00:26:05.323+01:00  INFO 2138 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-03-27T00:26:05.377+01:00  INFO 2138 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-27T00:26:05.377+01:00  INFO 2138 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 891 ms
+2025-03-27T00:26:05.748+01:00  INFO 2138 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-27T00:26:05.754+01:00  INFO 2138 --- [main] c.s.alerts.SafetyNetAlertsApplication    : Started SafetyNetAlertsApplication in 1.72 seconds (process running for 2.001)
+2025-03-27T00:26:05.816+01:00  INFO 2138 --- [main] c.s.alerts.repository.DataRepository     : Données chargées avec succès depuis data.json
+2025-03-27T00:26:05.817+01:00  INFO 2138 --- [main] c.s.alerts.repository.DataRepository     : Data loaded: Persons - 23, FireStations - 13, MedicalRecords - 23
+2025-03-27T00:26:05.818+01:00  INFO 2138 --- [main] c.s.alerts.SafetyNetAlertsApplication    : === Ceci est un test de log INFO ===
+2025-03-27T00:26:05.818+01:00 ERROR 2138 --- [main] c.s.alerts.SafetyNetAlertsApplication    : === Ceci est un test de log ERROR ===
+2025-03-27T00:26:26.804+01:00  INFO 2138 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-27T00:26:26.829+01:00  INFO 2138 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-27T00:28:22.707+01:00  INFO 2294 --- [main] c.s.alerts.SafetyNetAlertsApplication    : Starting SafetyNetAlertsApplication using Java 23 with PID 2294 (/Users/fethikharrat/Downloads/SafetyNet-Alerts/alerts/target/classes started by fethikharrat in /Users/fethikharrat/Downloads/SafetyNet-Alerts/alerts)
+2025-03-27T00:28:22.709+01:00  INFO 2294 --- [main] c.s.alerts.SafetyNetAlertsApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-03-27T00:28:23.362+01:00  INFO 2294 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-27T00:28:23.375+01:00  INFO 2294 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-27T00:28:23.376+01:00  INFO 2294 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-03-27T00:28:23.415+01:00  INFO 2294 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-27T00:28:23.415+01:00  INFO 2294 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 663 ms
+2025-03-27T00:28:23.705+01:00  INFO 2294 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-27T00:28:23.712+01:00  INFO 2294 --- [main] c.s.alerts.SafetyNetAlertsApplication    : Started SafetyNetAlertsApplication in 1.326 seconds (process running for 1.574)
+2025-03-27T00:28:23.757+01:00  INFO 2294 --- [main] c.s.alerts.repository.DataRepository     : Données chargées avec succès depuis data.json
+2025-03-27T00:28:23.758+01:00  INFO 2294 --- [main] c.s.alerts.repository.DataRepository     : Data loaded: Persons - 23, FireStations - 13, MedicalRecords - 23
+2025-03-27T00:28:23.759+01:00  INFO 2294 --- [main] c.s.alerts.SafetyNetAlertsApplication    : === Ceci est un test de log INFO ===
+2025-03-27T00:28:23.759+01:00 ERROR 2294 --- [main] c.s.alerts.SafetyNetAlertsApplication    : === Ceci est un test de log ERROR ===
+2025-03-27T00:34:49.263+01:00  INFO 2294 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-27T00:34:49.297+01:00  INFO 2294 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-27T00:35:31.065+01:00  INFO 2345 --- [main] c.s.alerts.SafetyNetAlertsApplication    : Starting SafetyNetAlertsApplication using Java 23 with PID 2345 (/Users/fethikharrat/Downloads/SafetyNet-Alerts/alerts/target/classes started by fethikharrat in /Users/fethikharrat/Downloads/SafetyNet-Alerts/alerts)
+2025-03-27T00:35:31.067+01:00  INFO 2345 --- [main] c.s.alerts.SafetyNetAlertsApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-03-27T00:35:31.730+01:00  INFO 2345 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-27T00:35:31.743+01:00  INFO 2345 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-27T00:35:31.744+01:00  INFO 2345 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-03-27T00:35:31.790+01:00  INFO 2345 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-27T00:35:31.791+01:00  INFO 2345 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 680 ms
+2025-03-27T00:35:32.081+01:00  WARN 2345 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-03-27T00:35:32.093+01:00  INFO 2345 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-03-27T00:35:32.105+01:00 ERROR 2345 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2025-03-27T00:36:14.117+01:00  INFO 2366 --- [main] c.s.alerts.SafetyNetAlertsApplication    : Starting SafetyNetAlertsApplication using Java 23 with PID 2366 (/Users/fethikharrat/Downloads/SafetyNet-Alerts/alerts/target/classes started by fethikharrat in /Users/fethikharrat/Downloads/SafetyNet-Alerts/alerts)
+2025-03-27T00:36:14.119+01:00  INFO 2366 --- [main] c.s.alerts.SafetyNetAlertsApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-03-27T00:36:14.797+01:00  INFO 2366 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-27T00:36:14.810+01:00  INFO 2366 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-27T00:36:14.811+01:00  INFO 2366 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-03-27T00:36:14.849+01:00  INFO 2366 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-27T00:36:14.849+01:00  INFO 2366 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 681 ms
+2025-03-27T00:36:15.147+01:00  INFO 2366 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-27T00:36:15.154+01:00  INFO 2366 --- [main] c.s.alerts.SafetyNetAlertsApplication    : Started SafetyNetAlertsApplication in 1.365 seconds (process running for 1.606)
+2025-03-27T00:36:15.200+01:00  INFO 2366 --- [main] c.s.alerts.repository.DataRepository     : Données chargées avec succès depuis data.json
+2025-03-27T00:36:15.200+01:00  INFO 2366 --- [main] c.s.alerts.repository.DataRepository     : Data loaded: Persons - 23, FireStations - 13, MedicalRecords - 23
+2025-03-27T00:36:15.201+01:00  INFO 2366 --- [main] c.s.alerts.SafetyNetAlertsApplication    : === Ceci est un test de log INFO ===
+2025-03-27T00:36:15.201+01:00 ERROR 2366 --- [main] c.s.alerts.SafetyNetAlertsApplication    : === Ceci est un test de log ERROR ===
+2025-03-27T00:41:50.220+01:00  INFO 2366 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-27T00:41:50.255+01:00  INFO 2366 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-27T00:42:18.531+01:00  INFO 2430 --- [main] c.s.alerts.SafetyNetAlertsApplication    : Starting SafetyNetAlertsApplication using Java 23 with PID 2430 (/Users/fethikharrat/Downloads/SafetyNet-Alerts/alerts/target/classes started by fethikharrat in /Users/fethikharrat/Downloads/SafetyNet-Alerts/alerts)
+2025-03-27T00:42:18.533+01:00  INFO 2430 --- [main] c.s.alerts.SafetyNetAlertsApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-03-27T00:42:19.231+01:00  INFO 2430 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-27T00:42:19.248+01:00  INFO 2430 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-27T00:42:19.249+01:00  INFO 2430 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-03-27T00:42:19.297+01:00  INFO 2430 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-27T00:42:19.297+01:00  INFO 2430 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 719 ms
+2025-03-27T00:42:19.616+01:00  INFO 2430 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-27T00:42:19.622+01:00  INFO 2430 --- [main] c.s.alerts.SafetyNetAlertsApplication    : Started SafetyNetAlertsApplication in 1.432 seconds (process running for 1.743)
+2025-03-27T00:42:19.667+01:00  INFO 2430 --- [main] c.s.alerts.repository.DataRepository     : Données chargées avec succès depuis data.json
+2025-03-27T00:42:19.668+01:00  INFO 2430 --- [main] c.s.alerts.repository.DataRepository     : Data loaded: Persons - 23, FireStations - 13, MedicalRecords - 23
+2025-03-27T00:42:19.669+01:00  INFO 2430 --- [main] c.s.alerts.SafetyNetAlertsApplication    : === Ceci est un test de log INFO ===
+2025-03-27T00:42:19.670+01:00 ERROR 2430 --- [main] c.s.alerts.SafetyNetAlertsApplication    : === Ceci est un test de log ERROR ===
+2025-03-27T00:43:34.276+01:00  INFO 2430 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-27T00:43:34.295+01:00  INFO 2430 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-27T00:47:23.204+01:00  INFO 2472 --- [main] c.s.alerts.SafetyNetAlertsApplication    : Starting SafetyNetAlertsApplication using Java 23 with PID 2472 (/Users/fethikharrat/Downloads/SafetyNet-Alerts/alerts/target/classes started by fethikharrat in /Users/fethikharrat/Downloads/SafetyNet-Alerts/alerts)
+2025-03-27T00:47:23.206+01:00  INFO 2472 --- [main] c.s.alerts.SafetyNetAlertsApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-03-27T00:47:24.122+01:00  INFO 2472 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-27T00:47:24.144+01:00  INFO 2472 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-27T00:47:24.145+01:00  INFO 2472 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-03-27T00:47:24.211+01:00  INFO 2472 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-27T00:47:24.212+01:00  INFO 2472 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 944 ms
+2025-03-27T00:47:24.634+01:00  WARN 2472 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-03-27T00:47:24.654+01:00  INFO 2472 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-03-27T00:47:24.676+01:00 ERROR 2472 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2025-03-27T00:47:53.131+01:00  INFO 2492 --- [main] c.s.alerts.SafetyNetAlertsApplication    : Starting SafetyNetAlertsApplication using Java 23 with PID 2492 (/Users/fethikharrat/Downloads/SafetyNet-Alerts/alerts/target/classes started by fethikharrat in /Users/fethikharrat/Downloads/SafetyNet-Alerts/alerts)
+2025-03-27T00:47:53.133+01:00  INFO 2492 --- [main] c.s.alerts.SafetyNetAlertsApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-03-27T00:47:53.804+01:00  INFO 2492 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-27T00:47:53.817+01:00  INFO 2492 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-27T00:47:53.817+01:00  INFO 2492 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-03-27T00:47:53.855+01:00  INFO 2492 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-27T00:47:53.855+01:00  INFO 2492 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 675 ms
+2025-03-27T00:47:54.159+01:00  INFO 2492 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-27T00:47:54.166+01:00  INFO 2492 --- [main] c.s.alerts.SafetyNetAlertsApplication    : Started SafetyNetAlertsApplication in 1.36 seconds (process running for 1.602)
+2025-03-27T00:47:54.232+01:00  INFO 2492 --- [main] c.s.alerts.repository.DataRepository     : Données chargées avec succès depuis data.json
+2025-03-27T00:47:54.232+01:00  INFO 2492 --- [main] c.s.alerts.repository.DataRepository     : Data loaded: Persons - 23, FireStations - 13, MedicalRecords - 23
+2025-03-27T00:47:54.234+01:00  INFO 2492 --- [main] c.s.alerts.SafetyNetAlertsApplication    : === Ceci est un test de log INFO ===
+2025-03-27T00:47:54.234+01:00 ERROR 2492 --- [main] c.s.alerts.SafetyNetAlertsApplication    : === Ceci est un test de log ERROR ===
+2025-03-27T00:48:17.470+01:00  INFO 2492 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-27T00:48:17.493+01:00  INFO 2492 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-27T00:53:08.694+01:00  INFO 2542 --- [main] c.s.alerts.SafetyNetAlertsApplication    : Starting SafetyNetAlertsApplication using Java 23 with PID 2542 (/Users/fethikharrat/Downloads/SafetyNet-Alerts/alerts/target/classes started by fethikharrat in /Users/fethikharrat/Downloads/SafetyNet-Alerts/alerts)
+2025-03-27T00:53:08.696+01:00  INFO 2542 --- [main] c.s.alerts.SafetyNetAlertsApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-03-27T00:53:09.494+01:00  INFO 2542 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-27T00:53:09.510+01:00  INFO 2542 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-27T00:53:09.511+01:00  INFO 2542 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-03-27T00:53:09.567+01:00  INFO 2542 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-27T00:53:09.567+01:00  INFO 2542 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 819 ms
+2025-03-27T00:53:09.950+01:00  WARN 2542 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-03-27T00:53:09.967+01:00  INFO 2542 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-03-27T00:53:09.998+01:00 ERROR 2542 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2025-03-27T00:55:56.802+01:00  INFO 2579 --- [main] c.s.alerts.SafetyNetAlertsApplication    : Starting SafetyNetAlertsApplication using Java 23 with PID 2579 (/Users/fethikharrat/Downloads/SafetyNet-Alerts/alerts/target/classes started by fethikharrat in /Users/fethikharrat/Downloads/SafetyNet-Alerts/alerts)
+2025-03-27T00:55:56.805+01:00  INFO 2579 --- [main] c.s.alerts.SafetyNetAlertsApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-03-27T00:55:57.616+01:00  INFO 2579 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-27T00:55:57.629+01:00  INFO 2579 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-27T00:55:57.630+01:00  INFO 2579 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-03-27T00:55:57.688+01:00  INFO 2579 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-27T00:55:57.689+01:00  INFO 2579 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 832 ms
+2025-03-27T00:55:58.038+01:00  WARN 2579 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-03-27T00:55:58.049+01:00  INFO 2579 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-03-27T00:55:58.069+01:00 ERROR 2579 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2025-03-27T00:56:11.041+01:00  INFO 2606 --- [main] c.s.alerts.SafetyNetAlertsApplication    : Starting SafetyNetAlertsApplication using Java 23 with PID 2606 (/Users/fethikharrat/Downloads/SafetyNet-Alerts/alerts/target/classes started by fethikharrat in /Users/fethikharrat/Downloads/SafetyNet-Alerts/alerts)
+2025-03-27T00:56:11.043+01:00  INFO 2606 --- [main] c.s.alerts.SafetyNetAlertsApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-03-27T00:56:11.692+01:00  INFO 2606 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-27T00:56:11.705+01:00  INFO 2606 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-27T00:56:11.705+01:00  INFO 2606 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-03-27T00:56:11.742+01:00  INFO 2606 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-27T00:56:11.742+01:00  INFO 2606 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 655 ms
+2025-03-27T00:56:12.033+01:00  INFO 2606 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-27T00:56:12.038+01:00  INFO 2606 --- [main] c.s.alerts.SafetyNetAlertsApplication    : Started SafetyNetAlertsApplication in 1.316 seconds (process running for 1.568)
+2025-03-27T00:56:12.083+01:00  INFO 2606 --- [main] c.s.alerts.repository.DataRepository     : Données chargées avec succès depuis data.json
+2025-03-27T00:56:12.084+01:00  INFO 2606 --- [main] c.s.alerts.repository.DataRepository     : Data loaded: Persons - 23, FireStations - 13, MedicalRecords - 23
+2025-03-27T00:56:12.085+01:00  INFO 2606 --- [main] c.s.alerts.SafetyNetAlertsApplication    : === Ceci est un test de log INFO ===
+2025-03-27T00:56:12.085+01:00 ERROR 2606 --- [main] c.s.alerts.SafetyNetAlertsApplication    : === Ceci est un test de log ERROR ===
+2025-03-27T00:57:13.750+01:00  INFO 2606 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-27T00:57:13.780+01:00  INFO 2606 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-27T00:57:29.348+01:00  INFO 2650 --- [main] c.s.alerts.SafetyNetAlertsApplication    : Starting SafetyNetAlertsApplication using Java 23 with PID 2650 (/Users/fethikharrat/Downloads/SafetyNet-Alerts/alerts/target/classes started by fethikharrat in /Users/fethikharrat/Downloads/SafetyNet-Alerts/alerts)
+2025-03-27T00:57:29.350+01:00  INFO 2650 --- [main] c.s.alerts.SafetyNetAlertsApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-03-27T00:57:30.010+01:00  INFO 2650 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-27T00:57:30.022+01:00  INFO 2650 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-27T00:57:30.022+01:00  INFO 2650 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-03-27T00:57:30.062+01:00  INFO 2650 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-27T00:57:30.062+01:00  INFO 2650 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 667 ms
+2025-03-27T00:57:30.357+01:00  INFO 2650 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-27T00:57:30.363+01:00  INFO 2650 --- [main] c.s.alerts.SafetyNetAlertsApplication    : Started SafetyNetAlertsApplication in 1.339 seconds (process running for 1.589)
+2025-03-27T00:57:30.407+01:00  INFO 2650 --- [main] c.s.alerts.repository.DataRepository     : Données chargées avec succès depuis data.json
+2025-03-27T00:57:30.408+01:00  INFO 2650 --- [main] c.s.alerts.repository.DataRepository     : Data loaded: Persons - 23, FireStations - 13, MedicalRecords - 23
+2025-03-27T00:57:30.409+01:00  INFO 2650 --- [main] c.s.alerts.SafetyNetAlertsApplication    : === Ceci est un test de log INFO ===
+2025-03-27T00:57:30.409+01:00 ERROR 2650 --- [main] c.s.alerts.SafetyNetAlertsApplication    : === Ceci est un test de log ERROR ===
+2025-03-27T00:57:55.308+01:00  INFO 2650 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-27T00:57:55.327+01:00  INFO 2650 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-27T00:58:56.876+01:00  INFO 2794 --- [main] c.s.alerts.SafetyNetAlertsApplication    : Starting SafetyNetAlertsApplication using Java 23 with PID 2794 (/Users/fethikharrat/Downloads/SafetyNet-Alerts/alerts/target/classes started by fethikharrat in /Users/fethikharrat/Downloads/SafetyNet-Alerts/alerts)
+2025-03-27T00:58:56.878+01:00  INFO 2794 --- [main] c.s.alerts.SafetyNetAlertsApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-03-27T00:58:57.621+01:00  INFO 2794 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-27T00:58:57.635+01:00  INFO 2794 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-27T00:58:57.635+01:00  INFO 2794 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-03-27T00:58:57.676+01:00  INFO 2794 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-27T00:58:57.677+01:00  INFO 2794 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 735 ms
+2025-03-27T00:58:57.983+01:00  WARN 2794 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-03-27T00:58:57.993+01:00  INFO 2794 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-03-27T00:58:58.003+01:00 ERROR 2794 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2025-03-27T00:59:14.850+01:00  INFO 2817 --- [main] c.s.alerts.SafetyNetAlertsApplication    : Starting SafetyNetAlertsApplication using Java 23 with PID 2817 (/Users/fethikharrat/Downloads/SafetyNet-Alerts/alerts/target/classes started by fethikharrat in /Users/fethikharrat/Downloads/SafetyNet-Alerts/alerts)
+2025-03-27T00:59:14.852+01:00  INFO 2817 --- [main] c.s.alerts.SafetyNetAlertsApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-03-27T00:59:15.547+01:00  INFO 2817 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-27T00:59:15.561+01:00  INFO 2817 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-27T00:59:15.561+01:00  INFO 2817 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-03-27T00:59:15.596+01:00  INFO 2817 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-27T00:59:15.596+01:00  INFO 2817 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 698 ms
+2025-03-27T00:59:15.895+01:00  INFO 2817 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-27T00:59:15.901+01:00  INFO 2817 --- [main] c.s.alerts.SafetyNetAlertsApplication    : Started SafetyNetAlertsApplication in 1.396 seconds (process running for 1.647)
+2025-03-27T00:59:15.944+01:00  INFO 2817 --- [main] c.s.alerts.repository.DataRepository     : Données chargées avec succès depuis data.json
+2025-03-27T00:59:15.945+01:00  INFO 2817 --- [main] c.s.alerts.repository.DataRepository     : Data loaded: Persons - 23, FireStations - 13, MedicalRecords - 23
+2025-03-27T00:59:15.946+01:00  INFO 2817 --- [main] c.s.alerts.SafetyNetAlertsApplication    : === Ceci est un test de log INFO ===
+2025-03-27T00:59:15.946+01:00 ERROR 2817 --- [main] c.s.alerts.SafetyNetAlertsApplication    : === Ceci est un test de log ERROR ===
+2025-03-27T08:33:01.370+01:00  INFO 2817 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-27T08:33:01.479+01:00  INFO 2817 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-27T08:35:18.807+01:00  INFO 3826 --- [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : Starting SafetyNetAlertsApplication using Java 23 with PID 3826 (/Users/fethikharrat/Downloads/SafetyNet-Alerts/alerts/target/classes started by fethikharrat in /Users/fethikharrat/Downloads/SafetyNet-Alerts/alerts)
+2025-03-27T08:35:18.810+01:00  INFO 3826 --- [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-03-27T08:35:18.897+01:00  INFO 3826 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-03-27T08:35:18.897+01:00  INFO 3826 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-03-27T08:35:20.153+01:00  INFO 3826 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-27T08:35:20.178+01:00  INFO 3826 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-27T08:35:20.178+01:00  INFO 3826 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-03-27T08:35:20.230+01:00  INFO 3826 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-27T08:35:20.230+01:00  INFO 3826 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1332 ms
+2025-03-27T08:35:20.751+01:00  INFO 3826 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-03-27T08:35:20.797+01:00  INFO 3826 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-27T08:35:20.809+01:00  INFO 3826 --- [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : Started SafetyNetAlertsApplication in 2.606 seconds (process running for 3.146)
+2025-03-27T08:35:20.904+01:00  INFO 3826 --- [restartedMain] c.s.alerts.repository.DataRepository     : Données chargées avec succès depuis data.json
+2025-03-27T08:35:20.904+01:00  INFO 3826 --- [restartedMain] c.s.alerts.repository.DataRepository     : Data loaded: Persons - 23, FireStations - 13, MedicalRecords - 23
+2025-03-27T08:35:20.907+01:00  INFO 3826 --- [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : === Ceci est un test de log INFO ===
+2025-03-27T08:35:20.907+01:00 ERROR 3826 --- [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : === Ceci est un test de log ERROR ===
+2025-03-27T08:35:44.331+01:00  INFO 3826 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 35 class path changes (0 additions, 34 deletions, 1 modification)
+2025-03-27T08:35:44.336+01:00  INFO 3826 --- [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-27T08:35:44.369+01:00  INFO 3826 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-27T08:35:44.504+01:00  INFO 3826 --- [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : Starting SafetyNetAlertsApplication using Java 23 with PID 3826 (/Users/fethikharrat/Downloads/SafetyNet-Alerts/alerts/target/classes started by fethikharrat in /Users/fethikharrat/Downloads/SafetyNet-Alerts/alerts)
+2025-03-27T08:35:44.504+01:00  INFO 3826 --- [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-03-27T08:35:44.868+01:00  INFO 3826 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-27T08:35:44.870+01:00  INFO 3826 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-27T08:35:44.871+01:00  INFO 3826 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-03-27T08:35:44.886+01:00  INFO 3826 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-27T08:35:44.886+01:00  INFO 3826 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 362 ms
+2025-03-27T08:35:45.012+01:00  INFO 3826 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-03-27T08:35:45.031+01:00  INFO 3826 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-27T08:35:45.038+01:00  INFO 3826 --- [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : Started SafetyNetAlertsApplication in 0.596 seconds (process running for 27.375)
+2025-03-27T08:35:45.042+01:00  INFO 3826 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-03-27T08:35:45.042+01:00  INFO 3826 --- [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : === Ceci est un test de log INFO ===
+2025-03-27T08:35:45.043+01:00 ERROR 3826 --- [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : === Ceci est un test de log ERROR ===
+2025-03-27T08:35:48.431+01:00  INFO 3826 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 34 class path changes (34 additions, 0 deletions, 0 modifications)
+2025-03-27T08:35:48.433+01:00  INFO 3826 --- [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-27T08:35:48.439+01:00  INFO 3826 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-27T08:35:48.551+01:00  INFO 3826 --- [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : Starting SafetyNetAlertsApplication using Java 23 with PID 3826 (/Users/fethikharrat/Downloads/SafetyNet-Alerts/alerts/target/classes started by fethikharrat in /Users/fethikharrat/Downloads/SafetyNet-Alerts/alerts)
+2025-03-27T08:35:48.553+01:00  INFO 3826 --- [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-03-27T08:35:48.898+01:00  INFO 3826 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-27T08:35:48.900+01:00  INFO 3826 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-27T08:35:48.900+01:00  INFO 3826 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-03-27T08:35:48.917+01:00  INFO 3826 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-27T08:35:48.917+01:00  INFO 3826 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 359 ms
+2025-03-27T08:35:49.103+01:00  INFO 3826 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-03-27T08:35:49.118+01:00  INFO 3826 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-27T08:35:49.124+01:00  INFO 3826 --- [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : Started SafetyNetAlertsApplication in 0.622 seconds (process running for 31.461)
+2025-03-27T08:35:49.127+01:00  INFO 3826 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-03-27T08:35:49.144+01:00  INFO 3826 --- [restartedMain] c.s.alerts.repository.DataRepository     : Données chargées avec succès depuis data.json
+2025-03-27T08:35:49.144+01:00  INFO 3826 --- [restartedMain] c.s.alerts.repository.DataRepository     : Data loaded: Persons - 23, FireStations - 13, MedicalRecords - 23
+2025-03-27T08:35:49.145+01:00  INFO 3826 --- [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : === Ceci est un test de log INFO ===
+2025-03-27T08:35:49.145+01:00 ERROR 3826 --- [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : === Ceci est un test de log ERROR ===
+2025-03-27T08:39:56.239+01:00  INFO 3826 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-27T08:39:56.245+01:00  INFO 3826 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete

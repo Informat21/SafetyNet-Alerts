@@ -52,5 +52,4 @@ public class MedicalRecordServiceImpl implements MedicalRecordService {
                         mr.getLastName().equalsIgnoreCase(lastName))
                 .findFirst();
     }
-
 }

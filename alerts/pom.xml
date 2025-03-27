@@ -6,26 +6,14 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.4.2</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/>
 	</parent>
 	<groupId>com.safetynet</groupId>
 	<artifactId>alerts</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>SafetyNet-Alerts</name>
 	<description>project  for Spring Boot</description>
-	<url/>
-	<licenses>
-		<license/>
-	</licenses>
-	<developers>
-		<developer/>
-	</developers>
-	<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
-	</scm>
+
 	<properties>
 		<java.version>17</java.version>
 	</properties>
@@ -63,8 +51,6 @@
 			<scope>test</scope>
 		</dependency>
 
-
-
 	<!-- JUnit 5 -->
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
@@ -78,6 +64,7 @@
 			<version>5.11.4</version>
 			<scope>test</scope>
 		</dependency>
+
 		<!-- MockMvc & Spring Extensions-->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -86,6 +73,28 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!-- Logging -->
+		<dependency>  <groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>2.0.16</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.boot</groupId>-->
+<!--			<artifactId>spring-boot-starter-logging</artifactId>-->
+<!--			<version>3.3.1</version>-->
+<!--		</dependency>-->
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.5.16</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -111,6 +120,9 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<jvmArguments>-Dlogging.file.name=logs/safetynet.log</jvmArguments>
+				</configuration>
 			</plugin>
 
 
@@ -124,7 +136,19 @@
 					</configuration>
 				</plugin>
 
-				<!-- Plugin pour mesurer la couverture de code -->
+<!--			<plugin>-->
+<!--				<groupId>org.springframework.boot</groupId>-->
+<!--				<artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--				<configuration>-->
+<!--					<arguments>-->
+<!--						&#45;&#45;logging.file.name=logs/safetynet.log-->
+<!--&lt;!&ndash;						&#45;&#45;logging.level.root=INFO&ndash;&gt;-->
+<!--					</arguments>-->
+<!--				</configuration>-->
+<!--			</plugin>-->
+
+
+			<!-- Plugin pour mesurer la couverture de code -->
 				<plugin>
 					<groupId>org.jacoco</groupId>
 					<artifactId>jacoco-maven-plugin</artifactId>
@@ -159,7 +183,6 @@
 				</executions>
 			</plugin>
 		</plugins>
-
 
 		<resources>
 			<resource>
