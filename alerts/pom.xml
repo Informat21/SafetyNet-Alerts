@@ -85,11 +85,7 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
-<!--		<dependency>-->
-<!--			<groupId>org.springframework.boot</groupId>-->
-<!--			<artifactId>spring-boot-starter-logging</artifactId>-->
-<!--			<version>3.3.1</version>-->
-<!--		</dependency>-->
+
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-classic</artifactId>
@@ -135,17 +131,6 @@
 						<reportsDirectory>target/surefire-reports</reportsDirectory>
 					</configuration>
 				</plugin>
-
-<!--			<plugin>-->
-<!--				<groupId>org.springframework.boot</groupId>-->
-<!--				<artifactId>spring-boot-maven-plugin</artifactId>-->
-<!--				<configuration>-->
-<!--					<arguments>-->
-<!--						&#45;&#45;logging.file.name=logs/safetynet.log-->
-<!--&lt;!&ndash;						&#45;&#45;logging.level.root=INFO&ndash;&gt;-->
-<!--					</arguments>-->
-<!--				</configuration>-->
-<!--			</plugin>-->
 
 
 			<!-- Plugin pour mesurer la couverture de code -->
